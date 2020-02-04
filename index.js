@@ -20,7 +20,7 @@ app.use(logger)
 
 app.use('/api', router)
 
-app.use('/*', (res, req) => res.sendFile(`${__dirname}/dist/index.html`))
+app.use('/*', (req, res) => res.sendFile(`${__dirname}/dist/index.html`))
 
 app.listen(port, () => console.log(`Express is up and running on ${port}`))
 
