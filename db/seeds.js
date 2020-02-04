@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const { dbURI } = require('../config/environment')
 const Film = require('../models/film')
-const User = require('../models/user')
+const User = require('./../models/user')
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true }, (err, db) => {
   if (err) return console.log(err)
   db.dropDatabase()
